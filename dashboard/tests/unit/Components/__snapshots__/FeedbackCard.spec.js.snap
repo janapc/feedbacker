@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeedbackCard /> should render feedback card correctly 1`] = `
+<div id="feedback-card" class="flex flex-col px-8 py-6 rounded cursor-pointer bg-brand-gray">
+  <div class="flex items-center justify-between w-full mb-8">
+    <badge-stub type="OTHER" id="field-badge"></badge-stub><span class="font-regular text-brand-graydark" id="field-createdAt">98 dias atrás</span>
+  </div>
+  <div class="text-lg font-medium text-gray-800" id="field-text">Banana Banana!</div>
+  <!--v-if-->
+  <div class="flex justify-end mt-8" id="close-chevron">
+    <icon-stub name="chevron-down" size="24" color="#C0BCB0"></icon-stub>
+  </div>
+</div>
+`;

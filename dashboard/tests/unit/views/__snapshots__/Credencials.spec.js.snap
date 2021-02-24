@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Credencials /> should render Credencials correctly 1`] = `
+<div class="flex justify-center w-full h-28 bg-brand-main">
+  <header-logged-stub id="headerLogged"></header-logged-stub>
+</div>
+<div class="flex flex-col items-center justify-center h-64 bg-brand-gray">
+  <h1 class="text-4xl font-black text-center text-gray-800">Credenciais</h1>
+  <p class="text-lg text-center text-gray-800 font-regular"> Guia de instalação e geração de suas credenciais </p>
+</div>
+<div class="flex justify-center w-full h-full">
+  <div class="flex flex-col w-4/5 max-w-6xl py-10">
+    <h1 class="text-3xl font-black text-brand-darkgray">instalação e configuração</h1>
+    <p class="mt-10 text-lg text-gray-800 font-regular"> Este aqui é a sua chave de api </p>
+    <div id="contentApikey" class="flex py-3 pl-5 mt-2 rounded justify-between items-center bg-brand-gray w-full lg:w-1/2"><span id="apikey">123banana</span>
+      <div class="flex ml-20 mr-5">
+        <icon-stub name="copy" id="apikey-copy" color="#C0BCB0" size="24" class="cursor-pointer"></icon-stub>
+        <icon-stub id="generate-apikey" name="loading" color="#C0BCB0" size="24" class="cursor-pointer ml-3"></icon-stub>
+      </div>
+    </div>
+    <p class="mt-5 text-lg text-gray-800 font-regular"> Coloque o script abaixo no seu site para começar a receber feedbacks </p>
+    <div id="contentScript" class="py-3 pl-5 pr-20 mt-2 rounded bg-brand-gray w-full lg:w-2/3 overflow-x-scroll"><pre>&lt;script src="http://janapc-feeadbacker-widget.netlify.app?api_key=123banana"&gt;&lt;/script&gt;</pre>
+    </div>
+  </div>
+</div>
+`;
