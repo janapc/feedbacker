@@ -5,10 +5,11 @@
 
 <p align="center">
   <img alt="Last commit" src="https://img.shields.io/github/last-commit/janapc/feedbacker"/>
-  <img alt="License" src="https://img.shields.io/github/license/janapc/feedbacker"/>
-  <img alt="Language count" src="https://img.shields.io/github/languages/count/janapc/feedbacker"/>
   <img alt="Language top" src="https://img.shields.io/github/languages/top/janapc/feedbacker"/>
   <img alt="Repo size" src="https://img.shields.io/github/repo-size/janapc/feedbacker"/>
+  <img alt="CI Dashboard e2e" src="https://github.com/janapc/feedbacker/actions/workflows/ci-dashboard-e2e.yml/badge.svg"/>
+  <img alt="CI Dashboard Unit" src="https://github.com/janapc/feedbacker/actions/workflows/ci-dashboard-unit.yml/badge.svg"/>
+  <img alt="Netlify sStatus" src="https://api.netlify.com/api/v1/badges/151ad7c6-896c-4791-a297-4be5040c8ece/deploy-status"/>
 </p>
 
 ***
