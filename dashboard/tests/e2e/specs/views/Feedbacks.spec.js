@@ -55,10 +55,7 @@ describe('Feedbacks', () => {
 
   it('should return a message to the user if the list of feedbacks have empty', () => {
     cy.intercept(
-      {
-        method: 'GET',
-        url: 'http://localhost:3000/feedbacks?limit=5&offset=0',
-      },
+      '/feedbacks?limit=5&offset=0',
       {
         statusCode: 200,
         body: { results: [], pagination: 0 },
@@ -72,17 +69,14 @@ describe('Feedbacks', () => {
   });
   it('should return a message to the user if occurred an error loading list of feedbacks', () => {
     cy.intercept(
-      {
-        method: 'GET',
-        url: 'http://localhost:3000/feedbacks?limit=5&offset=0',
-      },
+      '/feedbacks?limit=5&offset=0',
       {
         statusCode: 500,
         body: { error: 'Deu erro na request' },
       },
-    ).as('getFeedbacks');
+    ).as('getErrorFeedbacks');
 
-    cy.wait('@getFeedbacks');
+    cy.wait('@getErrorFeedbacks');
     cy.url().should('include', '/feedbacks');
 
     cy.get('#hasError-message').contains('conteceu um erro ao carregar os feedbacks 😔');

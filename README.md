@@ -21,9 +21,9 @@
 ***
 
 <p align="center">
-  <a href="#backend">Backend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#dashboard">Dashboard</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#technologies">Technologies</a>
+  <a href="#backend-gear">Backend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#dashboard-bar_chart">Dashboard</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#technologies-boom">Technologies</a>
 </p>
 
 ***
@@ -61,7 +61,7 @@ Before of run the commands, installed in your system the <a href="https://vuejs.
 ```sh
 $ npm i or yarn
 ```
-**run application local:**
+**run application local or developer:**
 ```sh
 $ npm run serve or yarn serve
 ```
@@ -72,6 +72,10 @@ $ npm run test:unit or yarn test:unit
 **run tests e2e:**
 ```sh
 $ npm run test:e2e or yarn test:e2e
+```
+**run build to production:**
+```sh
+$ npm run build or yarn build
 ```
 
 This dashboard run on port ```8080```
