@@ -22,10 +22,10 @@ describe('<FeedbackCard />', () => {
           type: 'OTHER',
           device: 'Chrome 85.0, macOS 10.14',
           page: 'https://banana.com/banana',
-          createdAt: 1605225600000,
+          createdAt: 1605225600000
         },
-        isOpened: false,
-      },
+        isOpened: false
+      }
     });
 
     const bagde = wrapper.findComponent('#field-badge');
@@ -56,9 +56,9 @@ describe('<FeedbackCard />', () => {
           type: 'OTHER',
           device: 'Chrome 85.0, macOS 10.14',
           page: 'https://banana.com/banana',
-          createdAt: 1605225600000,
-        },
-      },
+          createdAt: 1605225600000
+        }
+      }
     });
 
     const btnToggle = wrapper.find('#feedback-card');

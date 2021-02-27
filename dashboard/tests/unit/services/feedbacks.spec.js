@@ -22,7 +22,7 @@ describe('FeedbacksService', () => {
       all: 7,
       issue: 3,
       idea: 3,
-      other: 1,
+      other: 1
     };
 
     mockAxios.get.mockImplementationOnce(() => Promise.resolve({ data }));

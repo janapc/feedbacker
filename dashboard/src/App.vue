@@ -13,7 +13,7 @@ import { setCurrentUser } from './store/user';
 
 export default {
   components: { ModalFactory },
-  setup() {
+  setup () {
     const route = useRoute();
     const router = useRouter();
 
@@ -31,8 +31,8 @@ export default {
 
           setCurrentUser(data);
         }
-      },
+      }
     );
-  },
+  }
 };
 </script>

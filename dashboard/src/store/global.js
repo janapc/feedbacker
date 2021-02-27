@@ -1,17 +1,17 @@
 import { reactive } from 'vue';
 
 const globalInitialState = {
-  isLoading: false,
+  isLoading: false
 };
 
 const state = reactive(globalInitialState);
 
 export default state;
 
-export function resetGlobalStore() {
+export function resetGlobalStore () {
   state.isLoading = false;
 }
 
-export function setGlobalLoading(status) {
+export function setGlobalLoading (status) {
   state.isLoading = status;
 }

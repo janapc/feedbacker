@@ -5,8 +5,8 @@ describe('<Badge />', () => {
   it('should render badge IDEA correctly', () => {
     const wrapper = shallowMount(Badge, {
       props: {
-        type: 'IDEA',
-      },
+        type: 'IDEA'
+      }
     });
 
     expect(wrapper.find('#bagde-component').text()).toBe('idéia');
@@ -16,8 +16,8 @@ describe('<Badge />', () => {
   it('should render badge other type', () => {
     const wrapper = shallowMount(Badge, {
       props: {
-        type: 'BANANA',
-      },
+        type: 'BANANA'
+      }
     });
 
     expect(wrapper.find('#bagde-component').text()).toBe('outros');

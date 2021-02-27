@@ -1,4 +1,4 @@
-function validateEmptyAndLength3(value) {
+function validateEmptyAndLength3 (value) {
   if (!value) {
     return '*Este campo é obrigatório';
   }
@@ -9,7 +9,7 @@ function validateEmptyAndLength3(value) {
   return true;
 }
 
-function validateEmptyAndEmail(value) {
+function validateEmptyAndEmail (value) {
   if (!value) {
     return '*Este campo é obrigatório';
   }

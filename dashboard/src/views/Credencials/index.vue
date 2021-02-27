@@ -98,16 +98,16 @@ import { setApiKey } from '../../store/user';
 
 export default {
   components: { HeaderLogged, Icon, ContentLoader },
-  setup() {
+  setup () {
     const store = useStore();
     const toast = useToast();
 
     const state = reactive({
       isLoading: false,
-      hasError: false,
+      hasError: false
     });
 
-    function handleError(error) {
+    function handleError (error) {
       state.isLoading = false;
       state.hasError = !!error;
     }
@@ -118,10 +118,10 @@ export default {
         if (!store.Global.isLoading && !store.User.currentUser.apiKey) {
           handleError(true);
         }
-      },
+      }
     );
 
-    async function handleCopy() {
+    async function handleCopy () {
       toast.clear();
       try {
         await navigator.clipboard.writeText(store.User.currentUser.apiKey);
@@ -131,7 +131,7 @@ export default {
       }
     }
 
-    async function handleGenerateApiKey() {
+    async function handleGenerateApiKey () {
       try {
         state.isLoading = true;
         const { data } = await services.users.generateApiKey();
@@ -148,9 +148,9 @@ export default {
       state,
       brandColors: palette.brand,
       handleGenerateApiKey,
-      handleCopy,
+      handleCopy
     };
-  },
+  }
 };
 </script>
 

@@ -6,13 +6,13 @@ import { routes } from '../../../src/router';
 
 const router = createRouter({
   history: createWebHistory('/'),
-  routes,
+  routes
 });
 
 const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
-  removeItem: jest.fn(),
+  removeItem: jest.fn()
 };
 global.localStorage = localStorageMock;
 
@@ -25,8 +25,8 @@ describe('<HeaderLogged />', () => {
     await router.isReady();
     const wrapper = shallowMount(HeaderLogged, {
       global: {
-        plugins: [router],
-      },
+        plugins: [router]
+      }
     });
 
     expect(wrapper.html()).toMatchSnapshot();
@@ -37,8 +37,8 @@ describe('<HeaderLogged />', () => {
     await router.isReady();
     const wrapper = shallowMount(HeaderLogged, {
       global: {
-        plugins: [router],
-      },
+        plugins: [router]
+      }
     });
 
     const btnLogout = wrapper.find('#logout-button');
@@ -52,8 +52,8 @@ describe('<HeaderLogged />', () => {
 
     const wrapper = shallowMount(HeaderLogged, {
       global: {
-        plugins: [router],
-      },
+        plugins: [router]
+      }
     });
 
     const btnLogout = wrapper.find('#logout-button');
@@ -69,8 +69,8 @@ describe('<HeaderLogged />', () => {
 
     const wrapper = shallowMount(HeaderLogged, {
       global: {
-        plugins: [router],
-      },
+        plugins: [router]
+      }
     });
 
     const btnLogout = wrapper.find('#logout-button');
@@ -92,8 +92,8 @@ describe('<HeaderLogged />', () => {
 
     const wrapper = shallowMount(HeaderLogged, {
       global: {
-        plugins: [router],
-      },
+        plugins: [router]
+      }
     });
 
     const btnCredencials = wrapper.find('#router-credencials');

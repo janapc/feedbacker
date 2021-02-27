@@ -37,22 +37,22 @@ const LABELS = {
   all: 'Todos',
   issue: 'Problemas',
   idea: 'Ideais',
-  other: 'Outros',
+  other: 'Outros'
 };
 
 const COLORS = {
   all: { text: 'text-brand-info', bg: 'bg-brand-info' },
   issue: { text: 'text-brand-danger', bg: 'bg-brand-danger' },
   idea: { text: 'text-brand-warning', bg: 'bg-brand-warning' },
-  other: { text: 'text-brand-graydark', bg: 'bg-brand-graydark' },
+  other: { text: 'text-brand-graydark', bg: 'bg-brand-graydark' }
 };
 
-function applyFiltersStructure(summary) {
+function applyFiltersStructure (summary) {
   return Object.keys(summary).reduce((acc, cur) => {
     const currentFilter = {
       label: LABELS[cur],
       color: COLORS[cur],
-      amount: summary[cur],
+      amount: summary[cur]
     };
 
     if (cur === 'all') {
@@ -66,11 +66,11 @@ function applyFiltersStructure(summary) {
 }
 
 export default {
-  async setup(props, { emit }) {
+  async setup (props, { emit }) {
     const store = useStore('Global');
     const state = reactive({
       hasError: false,
-      filters: [{ label: null, amount: null }],
+      filters: [{ label: null, amount: null }]
     });
 
     try {
@@ -82,11 +82,11 @@ export default {
         all: 0,
         issue: 0,
         idea: 0,
-        other: 0,
+        other: 0
       });
     }
 
-    function handleSelect({ type }) {
+    function handleSelect ({ type }) {
       if (store.isLoading) {
         return;
       }
@@ -103,8 +103,8 @@ export default {
 
     return {
       state,
-      handleSelect,
+      handleSelect
     };
-  },
+  }
 };
 </script>

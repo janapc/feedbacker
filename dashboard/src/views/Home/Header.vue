@@ -53,9 +53,9 @@
 
 <script>
 export default {
-  setup(props, { emit }) {
+  setup (props, { emit }) {
     return { emit };
-  },
+  }
 };
 </script>
 

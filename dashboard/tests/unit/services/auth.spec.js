@@ -14,7 +14,7 @@ describe('AuthService', () => {
 
     const response = await AuthService(mockAxios).login({
       email: 'banana@banana.com',
-      password: '12345',
+      password: '12345'
     });
 
     expect(response.data).toHaveProperty('token');
@@ -24,7 +24,7 @@ describe('AuthService', () => {
     const user = {
       name: 'banana',
       password: '12345',
-      email: 'banana@banana.com',
+      email: 'banana@banana.com'
     };
     mockAxios.post.mockImplementationOnce(() => Promise.resolve({ data: user }));
 
@@ -38,7 +38,7 @@ describe('AuthService', () => {
   it('should throw an error when not found', async () => {
     const errors = {
       status: 404,
-      statusText: 'Not Found',
+      statusText: 'Not Found'
     };
     mockAxios.post.mockImplementationOnce(() => Promise.resolve({ request: errors }));
 

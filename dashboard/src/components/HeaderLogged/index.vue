@@ -35,7 +35,7 @@ import useStore from '../../hooks/useStore';
 import { cleanCurrentUser } from '../../store/user';
 
 export default {
-  setup() {
+  setup () {
     const router = useRouter();
     const store = useStore('User');
 
@@ -47,24 +47,24 @@ export default {
       return `${store.currentUser.name} (sair)`;
     });
 
-    function changeRouter(name) {
+    function changeRouter (name) {
       router.push({ name });
     }
 
-    function handleLogout() {
+    function handleLogout () {
       window.localStorage.removeItem('token');
       cleanCurrentUser();
       router.push(
-        { name: 'Home' },
+        { name: 'Home' }
       );
     }
 
     return {
       changeRouter,
       logoutLabel,
-      handleLogout,
+      handleLogout
     };
-  },
+  }
 };
 </script>
 

@@ -10,8 +10,8 @@ import ChevronDown from './ChevronDown.vue';
 export default {
   components: { Loading, Copy, ChevronDown },
   props: {
-    name: { type: String, required: true },
-  },
+    name: { type: String, required: true }
+  }
 };
 </script>
 

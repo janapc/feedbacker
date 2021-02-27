@@ -1,4 +1,4 @@
-function getDiffTimeBetweenCurrentDate(dateString = '', now = new Date()) {
+function getDiffTimeBetweenCurrentDate (dateString = '', now = new Date()) {
   const dayInMilliseconds = 86400000;
   if ([null, undefined, false, true].includes(dateString)) {
     return dateString;

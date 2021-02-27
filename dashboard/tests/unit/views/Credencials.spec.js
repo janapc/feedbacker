@@ -7,7 +7,7 @@ import { setApiKey } from '../../../src/store/user';
 
 const mockStore = {
   User: { currentUser: { name: 'Banana', apiKey: '123banana' } },
-  Global: { isLoading: false },
+  Global: { isLoading: false }
 };
 jest.mock('../../../src/hooks/useStore', () => () => mockStore);
 
@@ -15,14 +15,14 @@ jest.mock('vue-toastification');
 
 const toast = {
   clear: jest.fn(),
-  success: jest.fn(),
+  success: jest.fn()
 };
 
 jest.mock('../../../src/services');
 jest.mock('../../../src/store/user');
 
 const mockClipboard = {
-  writeText: jest.fn(),
+  writeText: jest.fn()
 };
 
 global.navigator.clipboard = mockClipboard;
@@ -35,8 +35,8 @@ describe('<Credencials />', () => {
   it('should render Credencials correctly', () => {
     const wrapper = shallowMount(Credencials, {
       global: {
-        plugins: [vueToastification],
-      },
+        plugins: [vueToastification]
+      }
     });
 
     expect(wrapper.html()).toMatchSnapshot();
@@ -47,8 +47,8 @@ describe('<Credencials />', () => {
 
     const wrapper = shallowMount(Credencials, {
       global: {
-        plugins: [vueToastification],
-      },
+        plugins: [vueToastification]
+      }
     });
 
     expect(wrapper.findComponent('#headerLogged').exists()).toBe(true);
@@ -65,8 +65,8 @@ describe('<Credencials />', () => {
 
     const wrapper = shallowMount(Credencials, {
       global: {
-        plugins: [vueToastification],
-      },
+        plugins: [vueToastification]
+      }
     });
 
     expect(wrapper.find('#apikey').text()).toBe('123banana');
@@ -95,8 +95,8 @@ describe('<Credencials />', () => {
 
     const wrapper = shallowMount(Credencials, {
       global: {
-        plugins: [vueToastification],
-      },
+        plugins: [vueToastification]
+      }
     });
 
     expect(wrapper.find('#apikey').text()).toBe('123banana');
@@ -125,8 +125,8 @@ describe('<Credencials />', () => {
 
     const wrapper = shallowMount(Credencials, {
       global: {
-        plugins: [vueToastification],
-      },
+        plugins: [vueToastification]
+      }
     });
 
     expect(wrapper.find('#apikey').text()).toBe('123banana');

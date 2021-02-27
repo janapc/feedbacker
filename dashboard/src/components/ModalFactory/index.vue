@@ -22,7 +22,7 @@
 </template>
 <script>
 import {
-  defineAsyncComponent, onBeforeMount, onMounted, reactive,
+  defineAsyncComponent, onBeforeMount, onMounted, reactive
 } from 'vue';
 
 import useModal from '../../hooks/useModal';
@@ -35,18 +35,18 @@ const DEFAULT_WIDTH = 'w-3/4 lg:w-1/3';
 export default {
   components: {
     ModalLogin,
-    ModalCreateAccount,
+    ModalCreateAccount
   },
-  setup() {
+  setup () {
     const modal = useModal();
     const state = reactive({
       isActive: false,
       component: {},
       props: {},
-      width: DEFAULT_WIDTH,
+      width: DEFAULT_WIDTH
     });
 
-    function handleModalToogle(payload) {
+    function handleModalToogle (payload) {
       if (payload.status) {
         state.component = payload.component;
         state.props = payload.props;
@@ -69,9 +69,9 @@ export default {
 
     return {
       state,
-      handleModalToogle,
+      handleModalToogle
     };
-  },
+  }
 };
 </script>
 

@@ -13,35 +13,35 @@ export default {
   props: {
     maxWidth: {
       default: 100,
-      type: Number,
+      type: Number
     },
     minWidth: {
       default: 80,
-      type: Number,
+      type: Number
     },
     animationDuration: {
       default: '1.6s',
-      type: String,
+      type: String
     },
     height: {
       default: '1rem',
-      type: String,
+      type: String
     },
     width: {
       default: '1rem',
-      type: String,
-    },
+      type: String
+    }
   },
-  setup(props) {
+  setup (props) {
     const computedWidth = computed(() => {
       const value = Math.random() * (props.width - props.minWidth);
       return props.width ?? `${Math.floor(value + props.minWidth)}%`;
     });
 
     return {
-      computedWidth,
+      computedWidth
     };
-  },
+  }
 };
 </script>
 

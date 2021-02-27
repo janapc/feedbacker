@@ -1,6 +1,6 @@
 const defaultPagination = {
   limit: 5,
-  offset: 0,
+  offset: 0
 };
 
 export default (httpClient) => ({
@@ -17,5 +17,5 @@ export default (httpClient) => ({
     const response = await httpClient.get('/feedbacks/summary');
 
     return { data: response.data };
-  },
+  }
 });

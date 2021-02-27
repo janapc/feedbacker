@@ -64,7 +64,7 @@
 
 <script>
 import {
-  onErrorCaptured, onMounted, onUnmounted, reactive,
+  onErrorCaptured, onMounted, onUnmounted, reactive
 } from 'vue';
 import HeaderLogged from '../../components/HeaderLogged/index.vue';
 import FeedbackCard from '../../components/FeedbackCard/index.vue';
@@ -79,9 +79,9 @@ export default {
     Filters,
     FiltersLoading,
     FeedbackCard,
-    FeedbackCardLoading,
+    FeedbackCardLoading
   },
-  setup() {
+  setup () {
     const state = reactive({
       isLoading: false,
       isLoadingFeedbacks: false,
@@ -91,18 +91,18 @@ export default {
       currentFeedbackType: '',
       pagination: {
         limit: 5,
-        offset: 0,
-      },
+        offset: 0
+      }
     });
 
-    function handleErros(error) {
+    function handleErros (error) {
       state.isLoading = false;
       state.isLoadingFeedbacks = false;
       state.isLoadingMoreFeedbacks = false;
       state.hasError = !!error;
     }
 
-    async function changeFeedbacksType(type) {
+    async function changeFeedbacksType (type) {
       try {
         state.isLoadingFeedbacks = true;
         state.pagination.limit = 5;
@@ -111,7 +111,7 @@ export default {
 
         const { data } = await services.feedbacks.getAll({
           type,
-          ...state.pagination,
+          ...state.pagination
         });
 
         state.feedbacks = data.results;
@@ -122,13 +122,13 @@ export default {
       }
     }
 
-    async function fetchFeedbacks() {
+    async function fetchFeedbacks () {
       try {
         state.isLoading = true;
 
         const { data } = await services.feedbacks.getAll({
           ...state.pagination,
-          type: state.currentFeedbackType,
+          type: state.currentFeedbackType
         });
 
         state.feedbacks = data.results;
@@ -139,9 +139,9 @@ export default {
       }
     }
 
-    async function handleScroll() {
-      const isBottomOfWindow = Math.ceil(document.documentElement.scrollTop + window.innerHeight)
-        >= document.documentElement.scrollHeight;
+    async function handleScroll () {
+      const isBottomOfWindow = Math.ceil(document.documentElement.scrollTop + window.innerHeight) >=
+        document.documentElement.scrollHeight;
 
       if (state.isLoading || state.isLoadingMoreFeedbacks) return;
       if (!isBottomOfWindow) return;
@@ -152,7 +152,7 @@ export default {
         const { data } = await services.feedbacks.getAll({
           ...state.pagination,
           type: state.currentFeedbackType,
-          offset: state.pagination.offset + 5,
+          offset: state.pagination.offset + 5
         });
 
         if (data.results.length) {
@@ -178,7 +178,7 @@ export default {
     onErrorCaptured(handleErros);
 
     return { state, changeFeedbacksType };
-  },
+  }
 };
 </script>
 

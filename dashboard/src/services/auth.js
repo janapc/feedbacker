@@ -7,13 +7,13 @@ export default (httpClient) => ({
     if (!response.data) {
       errors = {
         status: response.request.status,
-        statusText: response.request.statusText,
+        statusText: response.request.statusText
       };
     }
 
     return {
       data: response.data,
-      errors,
+      errors
     };
   },
   login: async ({ email, password }) => {
@@ -23,13 +23,13 @@ export default (httpClient) => ({
     if (!response.data) {
       errors = {
         status: response.request.status,
-        statusText: response.request.statusText,
+        statusText: response.request.statusText
       };
     }
 
     return {
       data: response.data,
-      errors,
+      errors
     };
-  },
+  }
 });

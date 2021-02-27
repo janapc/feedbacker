@@ -9,9 +9,9 @@ import { computed } from 'vue';
 
 export default {
   props: {
-    type: { type: String, required: true },
+    type: { type: String, required: true }
   },
-  setup(props) {
+  setup (props) {
     const label = computed(() => {
       if (props.type === 'ISSUE') {
         return 'problema';
@@ -38,8 +38,8 @@ export default {
 
     return {
       classColor,
-      label,
+      label
     };
-  },
+  }
 };
 </script>

@@ -6,13 +6,13 @@ import { routes } from '../../../src/router';
 
 const router = createRouter({
   history: createWebHistory('/'),
-  routes,
+  routes
 });
 
 const localStorageMock = {
   getItem: jest.fn(),
   setItem: jest.fn(),
-  removeItem: jest.fn(),
+  removeItem: jest.fn()
 };
 global.localStorage = localStorageMock;
 
@@ -22,8 +22,8 @@ describe('<Home />', () => {
     await router.isReady();
     const wrapper = shallowMount(Home, {
       global: {
-        plugins: [router],
-      },
+        plugins: [router]
+      }
     });
 
     expect(wrapper.html()).toMatchSnapshot();
@@ -36,8 +36,8 @@ describe('<Home />', () => {
     await router.isReady();
     shallowMount(Home, {
       global: {
-        plugins: [router],
-      },
+        plugins: [router]
+      }
     });
 
     expect(localStorage.getItem('token')).toBe('123');

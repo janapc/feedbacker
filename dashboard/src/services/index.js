@@ -10,11 +10,11 @@ import { setGlobalLoading } from '../store/global';
 const API_ENVS = {
   production: 'https://backend-vue3js.vercel.app',
   development: 'http://localhost:3000',
-  local: 'http://localhost:3000',
+  local: 'http://localhost:3000'
 };
 
 const httpClient = axios.create({
-  baseURL: API_ENVS[process.env.NODE_ENV] ?? API_ENVS.local,
+  baseURL: API_ENVS[process.env.NODE_ENV] ?? API_ENVS.local
 });
 
 httpClient.interceptors.response.use(
@@ -34,7 +34,7 @@ httpClient.interceptors.response.use(
     }
     setGlobalLoading(false);
     return error;
-  },
+  }
 );
 
 httpClient.interceptors.request.use((config) => {
@@ -50,5 +50,5 @@ httpClient.interceptors.request.use((config) => {
 export default {
   auth: AuthService(httpClient),
   users: UsersService(httpClient),
-  feedbacks: FeedbacksService(httpClient),
+  feedbacks: FeedbacksService(httpClient)
 };

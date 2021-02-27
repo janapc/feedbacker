@@ -87,49 +87,49 @@ import Icon from '../Icon/index.vue';
 
 export default {
   components: { Icon },
-  setup() {
+  setup () {
     const modal = useModal();
     const router = useRouter();
     const toast = useToast();
 
     const { value: nameValue, errorMessage: nameErrorMessage } = useField(
       'name',
-      validateEmptyAndLength3,
+      validateEmptyAndLength3
     );
     const { value: emailValue, errorMessage: emailErrorMessage } = useField(
       'email',
-      validateEmptyAndEmail,
+      validateEmptyAndEmail
     );
     const { value: passwordValue, errorMessage: passwordErrorMessage } = useField(
       'password',
-      validateEmptyAndLength3,
+      validateEmptyAndLength3
     );
 
     const state = reactive({
       name: {
         value: nameValue,
-        errorMessage: nameErrorMessage,
+        errorMessage: nameErrorMessage
       },
       email: {
         value: emailValue,
-        errorMessage: emailErrorMessage,
+        errorMessage: emailErrorMessage
       },
       password: {
         value: passwordValue,
-        errorMessage: passwordErrorMessage,
+        errorMessage: passwordErrorMessage
       },
       hasErrors: false,
-      isLoading: false,
+      isLoading: false
     });
 
-    function close() {
+    function close () {
       modal.close();
     }
 
-    async function login({ email, password }) {
+    async function login ({ email, password }) {
       const { data, errors } = await services.auth.login({
         email,
-        password,
+        password
       });
 
       if (!errors) {
@@ -141,7 +141,7 @@ export default {
       state.isLoading = false;
     }
 
-    async function handleSubmit() {
+    async function handleSubmit () {
       try {
         toast.clear();
 
@@ -149,12 +149,12 @@ export default {
         const { errors } = await services.auth.register({
           name: state.name.value,
           email: state.email.value,
-          password: state.password.value,
+          password: state.password.value
         });
         if (!errors) {
           await login({
             email: state.email.value,
-            password: state.password.value,
+            password: state.password.value
           });
           return;
         }
@@ -173,9 +173,9 @@ export default {
     return {
       state,
       close,
-      handleSubmit,
+      handleSubmit
     };
-  },
+  }
 };
 </script>
 

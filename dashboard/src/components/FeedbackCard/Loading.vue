@@ -10,6 +10,6 @@
 import ContentLoader from '../ContentLoader/index.vue';
 
 export default {
-  components: { ContentLoader },
+  components: { ContentLoader }
 };
 </script>

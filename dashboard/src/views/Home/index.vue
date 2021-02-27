@@ -19,9 +19,9 @@ import useModal from '../../hooks/useModal';
 export default {
   components: {
     Header,
-    Contact,
+    Contact
   },
-  setup() {
+  setup () {
     const router = useRouter();
     const modal = useModal();
 
@@ -31,23 +31,23 @@ export default {
       if (token) router.push({ name: 'Feedbacks' });
     });
 
-    function handleLogin() {
+    function handleLogin () {
       modal.open({
-        component: 'ModalLogin',
+        component: 'ModalLogin'
       });
     }
 
-    function handleAccountCreate() {
+    function handleAccountCreate () {
       modal.open({
-        component: 'ModalCreateAccount',
+        component: 'ModalCreateAccount'
       });
     }
 
     return {
       handleLogin,
-      handleAccountCreate,
+      handleAccountCreate
     };
-  },
+  }
 };
 </script>
 

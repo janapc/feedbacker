@@ -58,8 +58,8 @@ describe('Feedbacks', () => {
       '/feedbacks?limit=5&offset=0',
       {
         statusCode: 200,
-        body: { results: [], pagination: 0 },
-      },
+        body: { results: [], pagination: 0 }
+      }
     ).as('getFeedbacks');
 
     cy.wait('@getFeedbacks');
@@ -72,8 +72,8 @@ describe('Feedbacks', () => {
       '/feedbacks?limit=5&offset=0',
       {
         statusCode: 500,
-        body: { error: 'Deu erro na request' },
-      },
+        body: { error: 'Deu erro na request' }
+      }
     ).as('getErrorFeedbacks');
 
     cy.wait('@getErrorFeedbacks');

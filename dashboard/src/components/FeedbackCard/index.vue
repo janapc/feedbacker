@@ -58,15 +58,15 @@ export default {
   components: { Badge, Icon },
   props: {
     feedback: { type: Object, required: true },
-    isOpened: { type: Boolean, default: false },
+    isOpened: { type: Boolean, default: false }
   },
-  setup(props) {
+  setup (props) {
     const state = reactive({
       isOpen: props.isOpened,
-      isClosing: !props.isOpened,
+      isClosing: !props.isOpened
     });
 
-    async function handleToggle() {
+    async function handleToggle () {
       state.isClosing = true;
 
       await wait(250);
@@ -78,8 +78,8 @@ export default {
       handleToggle,
       getDiffTimeBetweenCurrentDate,
       brandColors: palette.brand,
-      state,
+      state
     };
-  },
+  }
 };
 </script>

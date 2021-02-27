@@ -4,7 +4,7 @@ import bus from '../../../src/utils/bus';
 jest.mock('../../../src/utils/bus', () => ({
   emit: jest.fn(),
   on: jest.fn(),
-  off: jest.fn(),
+  off: jest.fn()
 }));
 
 describe('UseModal Hooks', () => {
