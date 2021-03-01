@@ -72,7 +72,7 @@ describe('Feedbacks', () => {
       '/feedbacks?limit=5&offset=0',
       {
         statusCode: 500,
-        body: { error: 'Deu erro na request' }
+        body: { error: 'Request could not be performed' }
       }
     ).as('getErrorFeedbacks');
 
