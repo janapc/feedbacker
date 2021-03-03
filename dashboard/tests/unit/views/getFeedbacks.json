@@ -1,0 +1,65 @@
+{
+  "all": {
+    "data": {
+      "results": [{
+        "text": "banana banana",
+        "fingerprint": "123123",
+        "id": "1",
+        "apiKey": "banana-123-test",
+        "type": "ISSUE",
+        "device": "MacOs",
+        "page": "https://banana.com/banana",
+        "createdAt": 1608681600000
+      }, {
+        "text": "apple apple",
+        "fingerprint": "123123",
+        "id": "2",
+        "apiKey": "apple-123-test",
+        "type": "OTHER",
+        "device": "MacOs",
+        "page": "https://apple.com/apple",
+        "createdAt": 1608681600000
+      }],
+      "pagination": {
+        "limit": 5,
+        "offset": 0
+      }
+    }
+  },
+  "newPage": {
+    "data": {
+      "results": [{
+        "text": "potato potato",
+        "fingerprint": "123123",
+        "id": "2",
+        "apiKey": "potato-123-test",
+        "type": "IDEA",
+        "device": "MacOs",
+        "page": "https://potato.com/potato",
+        "createdAt": 1608681600000
+      }],
+      "pagination": {
+        "limit": 5,
+        "offset": 5
+      }
+    }
+  },
+  "filterSpecific": {
+    "data": {
+      "results": [{
+        "text": "potato potato",
+        "fingerprint": "123123",
+        "id": "2",
+        "apiKey": "potato-123-test",
+        "type": "ISSUE",
+        "device": "MacOs",
+        "page": "https://potato.com/potato",
+        "createdAt": 1608681600000
+      }],
+      "pagination": {
+        "limit": 5,
+        "offset": 5
+      }
+    }
+  }
+}
