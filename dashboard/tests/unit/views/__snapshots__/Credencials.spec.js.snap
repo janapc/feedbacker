@@ -19,7 +19,7 @@ exports[`<Credencials /> should render Credencials correctly 1`] = `
       </div>
     </div>
     <p class="mt-5 text-lg text-gray-800 font-regular"> Coloque o script abaixo no seu site para começar a receber feedbacks </p>
-    <div id="contentScript" class="py-3 pl-5 pr-20 mt-2 rounded bg-brand-gray w-full lg:w-2/3 overflow-x-scroll"><pre>&lt;script src="http://janapc-feeadbacker-widget.netlify.app?api_key=123banana"&gt;&lt;/script&gt;</pre>
+    <div id="contentScript" class="py-3 pl-5 pr-20 mt-2 rounded bg-brand-gray w-full lg:w-2/3 overflow-x-scroll"><pre>&lt;script defer async onload="init('123banana')" src="http://janapc-feeadbacker-widget.netlify.app/init.js"&gt;&lt;/script&gt;</pre>
     </div>
   </div>
 </div>

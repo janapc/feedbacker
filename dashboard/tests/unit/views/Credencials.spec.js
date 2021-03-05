@@ -58,10 +58,8 @@ describe('<Credencials />', () => {
     expect(wrapper.find('#contentScript').exists()).toBe(false);
   });
 
-  it('should show the API key of the user and generate a script for the user', () => {
+  it('should show the API key of the user and the script', () => {
     mockStore.Global = { isLoading: false };
-
-    const sriptText = '<script src="http://janapc-feeadbacker-widget.netlify.app?api_key=123banana"></script>';
 
     const wrapper = shallowMount(Credencials, {
       global: {
@@ -72,7 +70,7 @@ describe('<Credencials />', () => {
     expect(wrapper.find('#apikey').text()).toBe('123banana');
     expect(wrapper.find('#apikey-copy').attributes('color')).toContain('#C0BCB0');
     expect(wrapper.find('#generate-apikey').attributes('color')).toContain('#C0BCB0');
-    expect(wrapper.find('pre').text()).toBe(sriptText);
+    expect(wrapper.find('pre').text()).toContain('http://janapc-feeadbacker-widget.netlify.app');
   });
 
   it('should copy the api key of user', async () => {
