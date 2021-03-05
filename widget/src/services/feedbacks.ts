@@ -1,5 +1,5 @@
 import { AxiosInstance } from 'axios';
-import { Feedback } from '../types/Feedback';
+import { Feedback } from '../types/feedback';
 import { RequestError } from '../types/error';
 
 export type Create = {
