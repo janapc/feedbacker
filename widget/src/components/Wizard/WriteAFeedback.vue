@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center justify-center w-full my-5">
+  <div class="flex flex-col items-center justify-center w-full my-5" id="write-a-feedback-component">
     <textarea
       v-model="state.feedback"
       class="w-full rounded-lg border-2 border-gray-300 border-solid h-24 p-2 resize-none focus:outline"
@@ -92,6 +92,7 @@ export default defineComponent({
           device: window.navigator.userAgent,
           fingerprint: store.fingerprint
         });
+
         if (!response.errors) {
           setSuccessState();
         } else {

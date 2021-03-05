@@ -1,5 +1,8 @@
 <template>
-  <div class="flex justify-between w-full my-5" id="select-feedback-type-component">
+  <div
+    class="flex justify-between w-full my-5"
+    id="select-feedback-type-component"
+  >
     <button
       @click="() => handleSelect('ISSUE')"
       id="button-issue"
@@ -16,15 +19,12 @@
     </button>
 
     <button
+      id="btn-IDEA"
       @click="() => handleSelect('IDEA')"
       class="rounded-xl hover:bg-gray-100 bg-brand-gray flex flex-col justify-center items-center p-5 w-28 cursor-pointer focus:outline-none"
     >
       <div class="w-12">
-        <img
-          class="w-full"
-          src="../../assets/images/idea.png"
-          alt="problema"
-        />
+        <img class="w-full" src="../../assets/images/idea.png" alt="problema" />
       </div>
       <p class="font-medium mt-1 text-gray-800">Idéia</p>
     </button>
