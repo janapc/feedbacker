@@ -9,6 +9,8 @@
   <img alt="Repo size" src="https://img.shields.io/github/repo-size/janapc/feedbacker"/>
   <img alt="CI Dashboard e2e" src="https://github.com/janapc/feedbacker/actions/workflows/ci-dashboard-e2e.yml/badge.svg"/>
   <img alt="CI Dashboard Unit" src="https://github.com/janapc/feedbacker/actions/workflows/ci-dashboard-unit.yml/badge.svg"/>
+  <img alt="CI Widget e2e" src="https://github.com/janapc/feedbacker/actions/workflows/ci-widget-e2e.yml/badge.svg"/>
+  <img alt="CI Widget Unit" src="https://github.com/janapc/feedbacker/actions/workflows/ci-widget-unit.yml/badge.svg"/>
   <img alt="Netlify sStatus" src="https://api.netlify.com/api/v1/badges/151ad7c6-896c-4791-a297-4be5040c8ece/deploy-status"/>
 </p>
 
@@ -22,10 +24,21 @@
 ***
 
 <p align="center">
+  <a href="#demo-red_circle">Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#backend-gear">Backend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#dashboard-bar_chart">Dashboard</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#widget-dart">Widget</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#technologies-boom">Technologies</a>
 </p>
+
+***
+
+## Demo: :red_circle:
+**Widget**:
+![Widget](./demo/Widget.gif)
+
+**Dashboard**:
+![Dashboard](./demo/Dashboard.gif)
 
 ***
 
@@ -80,6 +93,31 @@ $ npm run build or yarn build
 ```
 
 This dashboard run on port ```8080```
+
+***
+## Widget: :dart:
+The folder widget is responsible to create an iframe using some information to create the widget correctly on the page of the client. This widget is used to get the feedback of the user and send the feedback to the dashboard where the owner of the page can access.
+
+Before of run the commands, installed in your system the <a href="https://vuejs.org/">**vuejs**</a>.To run of widget use the commands below:
+
+**install the dependencies:**
+```sh
+$ npm i or yarn
+```
+**run application local or developer:**
+```sh
+$ npm run serve or yarn serve
+```
+**run tests unit:**
+```sh
+$ npm run test:unit or yarn test:unit
+```
+**run tests e2e:**
+```sh
+$ npm run test:e2e or yarn test:e2e
+```
+
+This widget run on port ```8080```
 
 ***
 
